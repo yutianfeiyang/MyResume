@@ -2,9 +2,327 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>个人简历</title>
+    <title>Myresume</title>
+    <style>
+        body{
+            margin: 0 auto; /* 使 #container 居中 */
+        }
+        .headerwonderful{
+            padding-top: 20px;
+            background-color: #2F4F4F;
+            width:110%;
+            height:160px;
+            margin:  0 auto;
+            text-align: center ;
+            font-family: sans-serif;
+            font-size: 15px;
+            letter-spacing: 4px;
+        }
+        .myinfo{
+            width: 100%;
+            height: 300px;
+        }
+        .myinfo_left{
+            width:200px;
+            height: 200px;
+            margin-left: 100px;
+            margin-top: 50px;
+            border: groove;
+            float: left;
+            border-radius: 100%;
+            background-image: url("../pages/me.png");
+            background-repeat: no-repeat;
+            background-size: 220px,220px;
+        }
+        .myinfo_right{
+            margin-left: 100px;
+            margin-top: 50px;
+            float: left;
+        }
+        .technical_ability{
+            clear: both;
+            width: 100%;
+            height: 200px;
+            padding-left: 100px;
+            padding-top: 30px;
+            empty-cells: hide;
+        }
+
+       /* table tr td{
+            border:1px solid #282828;
+            border-collapse: collapse;
+            empty-cells: hide;
+        }*/
+        table tr td p{
+            line-height: 3ch;
+            font-family: "Lucida Grande", "Tahoma", serif;
+            letter-spacing: 2px;
+            text-indent: 20px;
+        }
+        .experience{
+            height: 950px;
+            padding-left: 100px;
+        }
+        p{
+            text-indent: 50px;
+            line-height: 39px;
+        }
+        li{
+            text-indent: 20px;
+            line-height: 39px;
+            margin-left: 80px;
+        }
+        .expectation{
+            padding-left: 100px;
+            height: 320px;
+        }
+        .foot_info{
+            padding-top: 20px;
+            background-color: #2F4F4F;
+            width:110%;
+            height:90px;
+            margin:  0 auto;
+            text-align: center ;
+            font-family: sans-serif;
+            font-size: 15px;
+            letter-spacing: 20px;
+        }
+
+
+
+    </style>
+    <script>
+        window.onload=function(){
+            rangejava();
+            rangeshell();
+            rangejenkins();
+            ranges()
+            rangesvn()
+            rangemiddle()
+        }
+        //qq个人信息图片
+        function qqchange(){
+            var qq_image=document.getElementById("qqimage_info");
+            if(qq_image.width==50){
+                qq_image.width=300;
+                qq_image.height=300;
+            }
+            else{
+                qq_image.width=50;
+                qq_image.height=50;
+            }
+        }
+
+        function wechatchange(){
+            var wechat_image=document.getElementById("wechatimage_info");
+            if(wechat_image.width==50){
+                wechat_image.width=300;
+                wechat_image.height=300;
+            }
+            else{
+                wechat_image.width=50;
+                wechat_image.height=50;
+            }
+        }
+        //java的熟练程度
+        /*
+         以下6个方法为当range发生变化时候值有发生变回
+         */
+        function rangejava(){
+            var rangejava=document.getElementById("rangejava_button");
+            if(rangejava.value==0){
+                document.getElementById("rangejava_label").innerHTML="菜鸟";
+                document.getElementById("rangejava_label").style.color="green";
+            }
+            if(rangejava.value==100){
+                document.getElementById("rangejava_label").innerHTML="精通";
+                document.getElementById("rangejava_label").style.color="red";
+            }
+            if(rangejava.value<100&&rangejava.value>=50){
+                document.getElementById("rangejava_label").innerHTML="熟练";
+                document.getElementById("rangejava_label").style.color="black";
+            }
+            if(rangejava.value<50&&rangejava.value>0){
+                document.getElementById("rangejava_label").innerHTML="入门";
+                document.getElementById("rangejava_label").style.color="blue";
+            }
+        }
+        function rangeshell(){
+            var rangejava=document.getElementById("rangeshell_button");
+            if(rangejava.value==0){
+                document.getElementById("rangeshell_label").innerHTML="菜鸟";
+            }
+            if(rangejava.value==100){
+                document.getElementById("rangeshell_label").innerHTML="精通";
+            }
+            if(rangejava.value<100&&rangejava.value>=50){
+                document.getElementById("rangeshell_label").innerHTML="熟练";
+            }
+            if(rangejava.value<50&&rangejava.value>0){
+                document.getElementById("rangeshell_label").innerHTML="入门";
+            }
+        }
+        function rangejenkins(){
+            var rangejenkins=document.getElementById("rangejenkins_button");
+            if(rangejenkins.value==0){
+                document.getElementById("rangejenkins_label").innerHTML="菜鸟";
+            }
+            if(rangejenkins.value==100){
+                document.getElementById("rangejenkins_label").innerHTML="精通";
+            }
+            if(rangejenkins.value<100&&rangejenkins.value>=50){
+                document.getElementById("rangejenkins_label").innerHTML="熟练";
+            }
+            if(rangejenkins.value<50&&rangejenkins.value>0){
+                document.getElementById("rangejenkins_label").innerHTML="入门";
+            }
+        }
+        function ranges(){
+            var ranges=document.getElementById("ranges_button");
+            if(ranges.value==0){
+                document.getElementById("ranges_label").innerHTML="菜鸟";
+            }
+            if(ranges.value==100){
+                document.getElementById("ranges_label").innerHTML="精通";
+            }
+            if(ranges.value<100&&ranges.value>=50){
+                document.getElementById("ranges_label").innerHTML="熟练";
+            }
+            if(ranges.value<50&&ranges.value>0){
+                document.getElementById("ranges_label").innerHTML="入门";
+            }
+        }
+        function rangesvn(){
+            var rangesvn=document.getElementById("rangesvn_button");
+            if(rangesvn.value==0){
+                document.getElementById("rangesvn_label").innerHTML="菜鸟";
+            }
+            if(rangesvn.value==100){
+                document.getElementById("rangesvn_label").innerHTML="精通";
+            }
+            if(rangesvn.value<100&&rangesvn.value>=50){
+                document.getElementById("rangesvn_label").innerHTML="熟练";
+            }
+            if(rangesvn.value<50&&ranges.value>0){
+                document.getElementById("rangesvn_label").innerHTML="入门";
+            }
+        }
+        function rangemiddle(){
+            var ranges=document.getElementById("rangemiddle_button");
+            if(ranges.value==0){
+                document.getElementById("rangemiddle_label").innerHTML="菜鸟";
+            }
+            if(ranges.value==100){
+                document.getElementById("rangemiddle_label").innerHTML="精通";
+            }
+            if(ranges.value<100&&ranges.value>=50){
+                document.getElementById("rangemiddle_label").innerHTML="熟练";
+            }
+            if(ranges.value<50&&ranges.value>0){
+                document.getElementById("rangemiddle_label").innerHTML="入门";
+            }
+        }
+    </script>
 </head>
 <body>
-<p1>我是一个菜鸟</p1>
+<!-- 表头  个人简历-->
+<div class="headerwonderful" align="center">
+    <br/>
+    <h1 align="center" style="color: #F0F8FF">个人简历&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h1>
+    <a href="#"></a>
+</div>
+<!-- 个人信息   头像和主要信息-->
+<div class="myinfo">
+    <div class="myinfo_left">
+    </div>
+    <div class="myinfo_right">
+        <table>
+            <tr>
+                <td width="140" align="center">姓名：</td><td>雷飞洋</td><td width="140"></td><td width="140">联系方式：</td><td>18567663051</td>
+            </tr>
+            <tr>
+                <td height="25"></td>
+            </tr>
+            <tr>
+                <td width="140" align="center">性别：</td><td>男</td><td width="140"></td><td width="140">毕业学校：</td><td>安阳工学院</td>
+            </tr>
+            <tr>
+                <td height="25"></td>
+            </tr>
+            <tr>
+                <td width="140" align="center">学历：</td><td>本科</td><td width="140"></td><td width="140">工作年限：</td><td>2年</td>
+            </tr>
+            <tr>
+                <td height="25"></td>
+            </tr>
+            <tr>
+                <td width="140" align="center">微信：</td><td><img id="wechatimage_info" width="50" height="50" src="../pages/wechat.jpg" onclick="wechatchange()"></td>
+                <td width="140"></td>
+                <td width="140">QQ：</td><td><img id="qqimage_info" width="50" height="60" src="../pages/qq.png" onclick="qqchange()"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!--个人技能-->
+<div class="technical_ability">
+    <strong><h3 style="font-family: 'Lucida Sans'">个人技能：</h3></strong>
+    <table style="padding-left: 50px">
+        <tr><td width="100"><p>Java语言</p></td><td><input width="200" type="range" value="67" min="0" max="100" id="rangejava_button" onchange="rangejava()"></td>
+            <td width="=150" align="center"><label id="rangejava_label"></label></td>
+            <td width="100"><p>Shell编程</p></td><td><input width="200" type="range" value="77" min="0" max="100" id="rangeshell_button" onchange="rangeshell()"></td>
+            <td width="=150"><label id="rangeshell_label"></label></td>
+
+            <td width="100"><p>Dubbo技术</p></td><td><input width="200" type="range" value="50" min="0" max="100" id="ranges_button" onchange="ranges()"></td>
+            <td width="=150" align="center"><label id="ranges_label"></label></td>
+        </tr>
+        <tr>
+            <td width="100"><p>Jenkins</p></td><td><input width="200" type="range" value="85" min="0" max="100" id="rangejenkins_button" onchange="rangejenkins()"></td>
+            <td width="=150" align="center"><label id="rangejenkins_label"></label></td>
+            <td width="100"><p>SVN,GIT</p></td><td><input width="200" type="range" value="50" min="0" max="100" id="rangesvn_button" onchange="rangesvn()"></td>
+            <td width="=150" align="center"><label id="rangesvn_label"></label></td>
+            <td width="100"><p>Tomcat,Websphere</p></td><td><input width="200" type="range" value="50" min="0" max="100" id="rangemiddle_button" onchange="rangemiddle()"></td>
+            <td width="=150" align="center"><label id="rangemiddle_label"></label></td>
+        </tr>
+    </table>
+</div>
+<!--工作经验-->
+<div class="experience">
+    <strong><h3 style="font-family: 'Lucida Sans'">工作经验：</h3></strong>
+    <span style="height: 15px"></span>
+    <h4 align="center">高伟达股份有限公司</h4>
+    <a href="http://www.git.com.cn/"><img src="../pages/gaoweida.png" style="float: left" height="100" width="240"></a><p>工作职责：开发工程师&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+     2015年10月至2017年3月
+    </p>
+    <p>主要负责搭建web项目的环境，使用的是IBM公司的websphere，能够熟练使用linux命令，并可以进行shell脚本编写，每天日常工作，
+        维护生产环境，主要使用的是jenkins自动部署集成工具，每天晚上向领导发送今日bug清单</p>
+    <p>负责项目中柜面组和保单组接口的开发，以及对bug的修复，定期更改修复的bug状态，方便测试组的技术复测，每天填写工作清单和日志，
+        根据需求分析组的设计完成客户对项目新需功能开发，目前项目处于后期阶段，每天主要进行bug修复和功能维护</p>
+    <span style="height: 15px"></span>
+    <h4 align="center">安心互联网保险有限公司</h4>
+    <a href="https://www.95303.com/"><img src="../pages/anxin.png" style="float: left" height="200" width="240"></a><p>工作职责：配置管理员&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    2017年3月至今
+</p>
+    <p>主要负责版本的发布，每周收到产品经理发送过来的新需求邮件，通知厂商开发人员进行版本整理之后，merge到公司分支上，通知测试测试，平常也主要维护jenkins的一些功能，
+        和负责一些shell脚本的编写工作，更新jira状态，根据刘总和陶总的需要整理一些发布的数据，负责配置文件的一些管理，升级生产环境，保证需求能够正常上线。
+        负责ant脚本的处理和编写，使用ant工具自动化构建，减少手工操作，提高便利性。
+    </p>
+    <p>软件配置管理是软件工程中的一项规程，包括相关工具和应用技术（过程或方法），公司用它来管理软件资产变更。配置管理实际就是四个正确，即正确的人，在正确的时候，可以获取到正确文件的正确的版本。且</p>
+        <ol>
+          <li>软件配置管理的各项工作是有计划进行的。</li>
+          <li>被选择的项目产品得到识别，控制并且可以被相关人员获取</li>
+          <li>已识别出的项目产品的更改得到控制</li>
+        </ol>
+     <p>   自动化集成持续部署工作，进一步优化发布的流程和保证发版之后产品的稳定，提升客户的使用体验，并且研究maven项目对jar包的版本控制，应用maven项目对dubbo的结合，使版本控制更加轻松。
+    </p>
+</div>
+<!--期望工作-->
+<div class="expectation">
+    <strong><h3 style="font-family: 'Lucida Sans'">工作期望：</h3></strong>
+    <ul style="float: left;"><li>JAVA开发工程师</li><li>全职</li><li>北京</li><li>10K-16K</li><li>有激情的团队</li></ul>
+</div>
+<!--结尾-->
+<div class="foot_info">
+     <h2>不疯魔，不成活&nbsp&nbsp&nbsp&nbsp</h2>
+</div>
 </body>
 </html>
