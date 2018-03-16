@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
     <meta charset="UTF-8">
     <title>配置管理工程师</title>
@@ -9,25 +9,94 @@
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script>
-        function open(html){
-            window.open("page.html","","width=200,height=200");
-        }
+        $(document).ready(
+            function(){
+                document.getElementById("birthday").value = "1992-04-30";
+                document.getElementById("graduation").value = "2016-07-01";
+            }
+
+        )
+
     </script>
+
 </head>
 <body>
-<div class="container" style="margin-top: 25px;margin-bottom: 10px">
+<div class="container"  style="margin-top:50px">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12" style="text-align: center">
-            <h1><b style="color: #000000;letter-spacing: 10px">个人简历</b></h1>
+            <h3 ><b>Application for employment</b></h3>
+            <h2  style="margin-top: auto">
+                <b style="color: #000000;letter-spacing: 10px">求职申请</b>
+            </h2>
         </div>
     </div>
 </div>
-<div class="container" style="border: double">
-    <div class="row">
-        <div class="col-xs-3 col-sm-3 col-md-1 col-lg-1" style="font-size: 20px;border: solid">姓名：</div>
-        <div class="col-xs-3 "
-        <div class="col-xs-3 col-sm-3 col-md-1 col-lg-1" style="font-size: 20px;border: solid"><input type="button" name="info" value="提交"   onclick="open()"/></div>
+<div class="container">
+    <div class="row page-header">
+        <div style="font-family: Arial"><h5><strong>PERSONAL INFORMATION 个人资料：</strong></h5></div>
     </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">Name</br>姓名</div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2"><input type="text" class="form-control" value="雷飞洋"></div>
+        <div class="clearfix visible-xs"></div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">Date of Birth</br>出生日期</div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2"><input type="date" class="form-control" id="birthday"></div>
+        <div class="clearfix visible-xs"></div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">Marital Status</br>婚姻状况</div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2"><input type="test" class="form-control" value="未婚"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">Gender</br>性别</div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2"><select class="form-control"><option value="man">男士</option><option value="woman">女士</option></select></div>
+        <div class="clearfix visible-xs"></div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">Hometown</br>籍贯</div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2"><input type="text" class="form-control" value="河南省洛阳市"></div>
+        <div class="clearfix visible-xs"></div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">Nationality</br>国籍</div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2"><input type="text" class="form-control" value="中国"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">Registered Residence</br>户口所在地</div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2"><input type="text" class="form-control" value="河南省洛阳市"></div>
+        <div class="clearfix visible-xs"></div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">Mobile Phone</br>手机</div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2"><input type="tel" class="form-control" value="18567663051"></div>
+        <div class="clearfix visible-xs"></div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">E-Mail</br>邮箱</div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2"><input type="email" class="form-control" value="574024320@qq.com"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">Highest Education Level</br>最高学历</div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2"><input type="text" class="form-control" value="本科"></div>
+        <div class="clearfix visible-xs"></div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">Graduation Time</br>毕业时间</div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2"><input type="date" class="form-control" id="graduation"></div>
+        <div class="clearfix visible-xs"></div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">University</br>毕业院校</div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2"><input type="text" class="form-control" value="安阳工学院"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">Annual Package</br>目前薪资（k/月）</div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2"><input type="number" class="form-control" value="0" ></div>
+        <div class="clearfix visible-xs"></div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">Expectation</br>期望薪资（k/月）</div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2"><input type="number" class="form-control" value="18" ></div>
+        <div class="clearfix visible-xs"></div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">Other Rewords</br>其他福利</div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2"><input type="text" class="form-control" value="年终奖，餐补，打车"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">Present Address</br>目前住址</div>
+        <div class="col-xs-6 col-sm-8 col-md-8 col-lg-8" style="float: left"><input type="text" class="form-control" value="北京市大兴区康庄路与兴华大街交叉口中建国际港"></div>
+        <div class="clearfix visible-md visible-lg visible-sm visible-xs"></div>
+    </div>
+</div>
+
+<div class="container" >
+    <div class="row page-header">
+        <div style="font-family: Arial"><h5><strong>WORKING EXPERIENCE 工作经历：</strong></h5></div>
+    </div>
+</div>
 </div>
 </body>
 </html>
